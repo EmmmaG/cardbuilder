@@ -7,9 +7,14 @@ const styles = (theme: Theme) => ({
     title: {
         color: theme.palette.grey[400],
         fontWeight: 600,
+        fontSize: '14px',
     },
     container: {
-        marginBottom: '25px',
+        textAlign: 'left' as 'left',
+        marginTop: '25px',
+        marginBottom: '20px',
+        marginLeft: '10px',
+        marginRight: '10px',
     },
 })
 

@@ -1,25 +1,29 @@
 import * as React from 'react'
-import { withStyles, WithStyles } from '@material-ui/core/styles'
+import { withStyles, WithStyles, Theme } from '@material-ui/core/styles'
 import Select from '@material-ui/core/Select'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 
-const styles = () => ({
+const styles = (theme: Theme) => ({
 	inputContainer: {
 		textAlign: 'left' as 'left',
-		marginTop: '10px',
-		marginBottom: '20px',
-		marginRight: '20px',
+		marginTop: '5px',
+		marginBottom: '5px',
+		marginLeft: '10px',
+		marginRight: '10px',
 		display: 'inline-block',
 	},
 	textField: {
 		height: '35px',
 		backgroundColor: 'white',
+		width: '195px',
 	},
 	inputRoot: {
 		height: '35px',
+		fontFamily: '"Big Caslon", "Times New Roman", "serif"',
 	},
 	title: {
+		color: theme.palette.grey[700],
 		marginBottom: '2px',
 	},
 })

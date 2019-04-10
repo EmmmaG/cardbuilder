@@ -10,10 +10,11 @@ const styles = (theme: Theme) => ({
 		fontWeight: 450,
 		textTransform: 'none' as 'none',
 		padding: '3px 20px',
-        width: '200px',
-		minWidth: '200px',
+        width: '195px',
 		border: 'none',
-        borderRadius: '3px',
+		borderRadius: '3px',
+		marginLeft: '10px',
+		marginRight: '10px',
 	},
 })
 

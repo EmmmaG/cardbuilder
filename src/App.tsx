@@ -4,7 +4,7 @@ import CardBuilder from './CardBuilder'
 export default class App extends React.Component<{}, {}> {
   render() {
     return (
-      <div>
+      <div style={{ maxWidth: '1280px', margin: 'auto' }}>
         <CardBuilder />
       </div>
     )
