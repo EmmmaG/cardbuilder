@@ -5,15 +5,15 @@ import ButtonComponent from '@material-ui/core/Button'
 const styles = (theme: Theme) => ({
 	button: {
 		color: 'white',
-        fontSize: '20px',
         backgroundColor: theme.palette.grey[500],
-		textTransform: 'none' as 'none',
+        fontSize: '20px',
 		fontWeight: 450,
+		textTransform: 'none' as 'none',
 		padding: '3px 20px',
-        borderRadius: '3px',
         width: '200px',
-        minWidth: '200px',
-        border: `1px solid ${theme.palette.grey[500]}`,
+		minWidth: '200px',
+		border: 'none',
+        borderRadius: '3px',
 	},
 })
 
