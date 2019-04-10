@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography'
 
 import TextInput from '../Components/TextInput'
 import Button from '../Components/Button'
+import UploadFileButton from '../Components/UploadFileButton'
 import Divider from '../Components/Divider'
 
 
@@ -24,6 +25,10 @@ const styles = (theme: Theme) => ({
     },
     buttonContainer: {
         marginTop: '30px',
+
+        '& input[type="file"]': {
+
+        },
     },
 })
 
@@ -42,6 +47,7 @@ export interface FormValue {
 
 export interface Props extends WithStyles<typeof styles> {
     onFormChange: (formValue: FormValue) => void
+    onAvatarSelected: (data: string) => void
 }
 
 export interface State {
@@ -162,14 +168,12 @@ export class BuilderForm extends React.Component<Props, State> {
 
     private renderButtons = () => (
         <div className={this.props.classes.buttonContainer}>
-            <Button
-                buttonContent='Upload Avatar'
-                onClick={() => console.log('a')}
-                backgroundColor='#768E9C'
+            <UploadFileButton
+                onFileLoaded={(data) => this.props.onAvatarSelected(data)}
             />
             <Button
                 buttonContent='Create hCard'
-                onClick={() => console.log('a')}
+                onClick={() => console.log('card created!')}
                 backgroundColor='#43A8E0'
             />
         </div>

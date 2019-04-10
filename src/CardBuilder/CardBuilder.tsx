@@ -18,6 +18,7 @@ export interface Props extends WithStyles<typeof styles> {
 
 export interface State {
     cardContents: FormValue
+    avatarData: string //base 64
 }
 
 export class CardBuilder extends React.Component<Props, State> {
@@ -26,6 +27,7 @@ export class CardBuilder extends React.Component<Props, State> {
 
         this.state = {
             cardContents: emptyFormValue,
+            avatarData: '',
         }
     }
 
@@ -33,14 +35,18 @@ export class CardBuilder extends React.Component<Props, State> {
         this.setState({ cardContents })
     }
 
+    private setAvatar = (avatarData: string) => {
+        this.setState({ avatarData })
+    }
+
     public render() {
         const { classes } = this.props
-        const { cardContents } = this.state
+        const { cardContents, avatarData } = this.state
 
         return (
             <div className={classes.builderContainer}>
-                <BuilderForm onFormChange={this.setCardContents} />
-                <PreviewCard contents={cardContents} />
+                <BuilderForm onFormChange={this.setCardContents} onAvatarSelected={this.setAvatar}/>
+                <PreviewCard contents={cardContents} avatar={avatarData}/>
             </div>
         )
     }

@@ -62,6 +62,7 @@ const styles = (theme: Theme) => ({
 
 export interface Props extends WithStyles<typeof styles> {
     contents: FormValue
+    avatar?: string
 }
 
 export class PreviewCard extends React.Component<Props > {
@@ -84,7 +85,7 @@ export class PreviewCard extends React.Component<Props > {
     }
 
     public render() {
-        const { classes, contents } = this.props
+        const { classes, contents, avatar } = this.props
 
         return (
             <div className={classes.mainContainer}>
@@ -93,7 +94,7 @@ export class PreviewCard extends React.Component<Props > {
                     <div className={classes.nameContainer}>
                         <Typography className={classes.name}>{`${contents.givenName} ${contents.surname}`}</Typography>
                     </div>
-                    <img src={person} className={classes.profile}/>
+                    <img src={avatar || person} className={classes.profile}/>
                     {this.renderCardContents()}
                 </div>
             </div>
