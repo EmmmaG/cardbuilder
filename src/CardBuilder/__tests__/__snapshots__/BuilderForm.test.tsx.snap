@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BuilderForm renders correctly 1`] = `
+<Fragment>
+  <div
+    className="BuilderForm-mainContainer-2"
+  >
+    <WithStyles(Typography)
+      className="BuilderForm-title-1"
+    >
+      hCard Builder
+    </WithStyles(Typography)>
+    <div>
+      <WithStyles(Divider)
+        title="PERSONAL DETAILS"
+      />
+      <div>
+        <WithStyles(TextInput)
+          key="givenName"
+          onChange={[Function]}
+          title="GIVEN NAME"
+        />
+        <WithStyles(TextInput)
+          key="surname"
+          onChange={[Function]}
+          title="SURNAME"
+        />
+      </div>
+      <div>
+        <WithStyles(TextInput)
+          key="email"
+          onChange={[Function]}
+          title="EMAIL"
+        />
+        <WithStyles(TextInput)
+          key="phone"
+          onChange={[Function]}
+          title="PHONE"
+        />
+      </div>
+    </div>
+    <div>
+      <WithStyles(Divider)
+        title="PERSONAL DETAILS"
+      />
+      <div>
+        <WithStyles(TextInput)
+          key="houseName"
+          onChange={[Function]}
+          title="HOUSE NAME OR #"
+        />
+        <WithStyles(TextInput)
+          key="street"
+          onChange={[Function]}
+          title="STREET"
+        />
+      </div>
+      <div>
+        <WithStyles(TextInput)
+          key="suburb"
+          onChange={[Function]}
+          title="SUBURB"
+        />
+        <WithStyles(TextInput)
+          key="state"
+          onChange={[Function]}
+          title="STATE"
+        />
+      </div>
+      <div>
+        <WithStyles(TextInput)
+          key="postcode"
+          onChange={[Function]}
+          title="POSTCODE"
+        />
+        <WithStyles(TextInput)
+          key="country"
+          onChange={[Function]}
+          title="COUNTRY"
+        />
+      </div>
+    </div>
+    <div
+      className="BuilderForm-buttonContainer-3"
+    >
+      <WithStyles(UploadFileButton)
+        onFileLoaded={[Function]}
+      />
+      <WithStyles(Button)
+        backgroundColor="#43A8E0"
+        buttonContent="Create hCard"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+  <WithStyles(Dialog)
+    onClose={[Function]}
+    open={false}
+  >
+    <WithStyles(DialogContent)>
+      <WithStyles(DialogContentText)>
+        Please use a valid email address.
+      </WithStyles(DialogContentText)>
+    </WithStyles(DialogContent)>
+    <WithStyles(DialogActions)>
+      <WithStyles(Button)
+        buttonContent="Got it!"
+        onClick={[Function]}
+      />
+    </WithStyles(DialogActions)>
+  </WithStyles(Dialog)>
+</Fragment>
+`;

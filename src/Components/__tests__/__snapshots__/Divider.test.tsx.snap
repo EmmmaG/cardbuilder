@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider renders correctly 1`] = `
+<div
+  className="Divider-container-2"
+>
+  <WithStyles(Typography)
+    className="Divider-title-1"
+  >
+    Details
+  </WithStyles(Typography)>
+  <WithStyles(Divider) />
+</div>
+`;

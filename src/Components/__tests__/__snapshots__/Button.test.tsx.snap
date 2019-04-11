@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<Button
+  buttonContent="button test"
+  classes={
+    Object {
+      "button": "Button-button-1",
+    }
+  }
+  onClick={[MockFunction]}
+/>
+`;

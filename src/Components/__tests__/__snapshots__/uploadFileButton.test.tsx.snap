@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadFileButton renders correctly 1`] = `
+<WithStyles(ButtonBase)
+  className="UploadFileButton-addButton-2"
+>
+  <WithStyles(Typography)
+    className="UploadFileButton-buttonText-3"
+  >
+    Upload Avatar
+  </WithStyles(Typography)>
+  <input
+    accept="image/*"
+    className="UploadFileButton-fileInput-1"
+    onChange={[Function]}
+    onClick={[Function]}
+    type="file"
+  />
+</WithStyles(ButtonBase)>
+`;

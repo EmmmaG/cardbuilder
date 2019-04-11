@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardBuilder renders correctly 1`] = `
+<div
+  className="CardBuilder-builderContainer-1"
+>
+  <WithStyles(BuilderForm)
+    onAvatarSelected={[Function]}
+    onFormChange={[Function]}
+  />
+  <WithStyles(PreviewCard)
+    avatar=""
+    contents={
+      Object {
+        "country": "",
+        "email": "",
+        "givenName": "",
+        "houseName": "",
+        "phone": "",
+        "postcode": "",
+        "state": "",
+        "street": "",
+        "suburb": "",
+        "surname": "",
+      }
+    }
+  />
+</div>
+`;

@@ -7,7 +7,7 @@ export interface HTMLFileInputElement extends HTMLInputElement {
     files: FileList
 }
 
-export const styles = (theme: Theme) => ({
+export const styles = () => ({
     fileInput: {
         opacity: 0,
         position: 'absolute' as 'absolute',

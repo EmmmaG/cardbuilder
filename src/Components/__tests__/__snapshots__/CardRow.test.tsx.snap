@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardRow renders correctly 1`] = `
+<div
+  className="CardRow-rowContainer-1"
+>
+  <div
+    className="CardRow-titleContainer-2"
+  />
+  <div
+    className="CardRow-contentContainer-3"
+  >
+    <WithStyles(Typography)
+      className="CardRow-content-4"
+    >
+      Sydney
+    </WithStyles(Typography)>
+  </div>
+</div>
+`;
+
+exports[`CardRow renders with correct props 1`] = `
+<div
+  className="CardRow-rowContainer-1"
+  style={
+    Object {
+      "width": "195px",
+    }
+  }
+>
+  <div
+    className="CardRow-titleContainer-2"
+  >
+    <WithStyles(Typography)
+      className="CardRow-title-5"
+    >
+      Address
+    </WithStyles(Typography)>
+  </div>
+  <div
+    className="CardRow-contentContainer-3"
+    style={
+      Object {
+        "width": "115px",
+      }
+    }
+  >
+    <WithStyles(Typography)
+      className="CardRow-content-4"
+    >
+      Sydney
+    </WithStyles(Typography)>
+  </div>
+</div>
+`;

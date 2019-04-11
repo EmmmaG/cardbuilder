@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PreviewCard renders correctly 1`] = `
+<div
+  className="PreviewCard-mainContainer-1"
+>
+  <WithStyles(Typography)
+    className="PreviewCard-title-2"
+  >
+    HCARD PREVIEW
+  </WithStyles(Typography)>
+  <div
+    className="PreviewCard-cardContainer-3"
+  >
+    <div
+      className="PreviewCard-nameContainer-4"
+    >
+      <WithStyles(Typography)
+        className="PreviewCard-name-5"
+      >
+        Jon 
+      </WithStyles(Typography)>
+    </div>
+    <img
+      className="PreviewCard-profile-6"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+    <div
+      className="PreviewCard-contentsContainer-7"
+    >
+      <WithStyles(CardRow)
+        content="Jon@somewhere.com"
+        title="EMAIL"
+      />
+      <WithStyles(CardRow)
+        content="012345678"
+        title="PHONE"
+      />
+      <WithStyles(CardRow)
+        content=" "
+        title="ADDRESS"
+      />
+      <WithStyles(CardRow)
+        content=" NSW"
+      />
+      <div
+        className="PreviewCard-postCountryContainer-8"
+      >
+        <WithStyles(CardRow)
+          content="1000"
+          inline={true}
+          title="POSTCODE"
+        />
+        <WithStyles(CardRow)
+          content="Aus"
+          inline={true}
+          title="COUNTRY"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

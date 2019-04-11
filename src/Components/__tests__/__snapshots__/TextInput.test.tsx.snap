@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput renders correctly 1`] = `
+<div
+  className="TextInput-inputContainer-1"
+>
+  <WithStyles(Typography)
+    className="TextInput-title-4"
+  >
+    Details
+  </WithStyles(Typography)>
+  <TextField
+    InputProps={
+      Object {
+        "classes": Object {
+          "root": "TextInput-inputRoot-3",
+        },
+      }
+    }
+    className="TextInput-textField-2"
+    id="Details"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    value=""
+    variant="outlined"
+  />
+</div>
+`;

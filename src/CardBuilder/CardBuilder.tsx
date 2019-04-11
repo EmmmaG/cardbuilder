@@ -3,7 +3,7 @@ import { withStyles, WithStyles, Theme } from '@material-ui/core/styles'
 import BuilderForm, { FormValue, emptyFormValue } from './BuilderForm'
 import PreviewCard from './PreviewCard'
 
-const styles = (theme: Theme) => ({
+const styles = () => ({
     builderContainer: {
         display: 'flex',
         flexDirection: 'row' as 'row',

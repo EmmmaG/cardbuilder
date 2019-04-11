@@ -1,14 +1,19 @@
 import * as React from 'react'
 import { withStyles, WithStyles, Theme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import Dialog from '@material-ui/core/Dialog'
+import DialogActions from '@material-ui/core/DialogActions'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogContentText from '@material-ui/core/DialogContentText'
 
 import TextInput from '../Components/TextInput'
 import Button from '../Components/Button'
 import UploadFileButton from '../Components/UploadFileButton'
 import Divider from '../Components/Divider'
 
+import validateEmail from './utils/validateEmail'
 
-const styles = (theme: Theme) => ({
+const styles = () => ({
     title: {
         fontSize: '32px',
         fontWeight: 900,
@@ -52,6 +57,7 @@ export interface Props extends WithStyles<typeof styles> {
 
 export interface State {
     formValue: FormValue
+    isOpen: boolean
 }
 
 export const emptyFormValue: FormValue = {
@@ -75,6 +81,7 @@ export class BuilderForm extends React.Component<Props, State> {
 
         this.state = {
             formValue: emptyFormValue,
+            isOpen: false,
         }
     }
 
@@ -87,6 +94,14 @@ export class BuilderForm extends React.Component<Props, State> {
                 [formKey]: value,
             }
         }, () => {this.props.onFormChange(this.state.formValue)})
+    }
+
+    private handleOpen = () => {
+        this.setState({ isOpen: true })
+    }
+
+    private handleClose = () => {
+        this.setState({ isOpen: false })
     }
 
     private renderTextInput = (title: string, formKey: FormKey) => {
@@ -166,6 +181,18 @@ export class BuilderForm extends React.Component<Props, State> {
         )
     }
 
+    private validateEmail = () => {
+        const { formValue } = this.state
+
+        if (formValue.email) {
+            const isEmailValid = validateEmail(formValue.email)
+console.log('isEmailValid', isEmailValid)
+            if (!isEmailValid) {
+                this.setState({ isOpen: true })
+            }
+        }
+    }
+
     private renderButtons = () => (
         <div className={this.props.classes.buttonContainer}>
             <UploadFileButton
@@ -173,7 +200,7 @@ export class BuilderForm extends React.Component<Props, State> {
             />
             <Button
                 buttonContent='Create hCard'
-                onClick={() => console.log('card created!')}
+                onClick={this.validateEmail}
                 backgroundColor='#43A8E0'
             />
         </div>
@@ -181,17 +208,34 @@ export class BuilderForm extends React.Component<Props, State> {
 
     public render() {
         const { classes } = this.props
+        const { isOpen } = this.state
 
         return (
-            <div className={classes.mainContainer}>
-				<Typography className={classes.title}>hCard Builder</Typography>
+            <React.Fragment>
+                <div className={classes.mainContainer}>
+                    <Typography className={classes.title}>hCard Builder</Typography>
 
-                {this.renderPersonalDetails()}
+                    {this.renderPersonalDetails()}
 
-                {this.renderAddress()}
+                    {this.renderAddress()}
 
-                {this.renderButtons()}
-            </div>
+                    {this.renderButtons()}
+                </div>
+                <Dialog
+                    open={isOpen}
+                    onClose={this.handleClose}
+                >
+                    <DialogContent>
+                        <DialogContentText>
+                            Please use a valid email address.
+                        </DialogContentText>
+                    </DialogContent>
+
+                    <DialogActions>
+                        <Button onClick={this.handleClose} buttonContent='Got it!' />
+                    </DialogActions>
+                </Dialog>
+            </React.Fragment>
         )
     }
 }
